@@ -367,13 +367,7 @@ require('lazy').setup({
         },
         p = {
           v = {
-            function()
-              if vim.fn.winnr '$' > 1 then
-                vim.cmd 'Explore'
-              else
-                vim.cmd 'vsplit | Explore'
-              end
-            end,
+            '<cmd>Explore<CR>',
             'Explore',
           },
         },
@@ -745,6 +739,7 @@ require('lazy').setup({
       -- end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        vue = { 'eslint' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
